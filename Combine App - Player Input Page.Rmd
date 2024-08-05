@@ -1,0 +1,32 @@
+---
+title: "Custom Player Input Information:"  #"Combine App - Player Input Page"
+output: html_document
+#date: "2024-07-30"
+---
+
+
+There are multiple features available from custom player input. Let's walk through how it works:
+
+
+1. Player Position Probabilities:
+
+- Using a multinomial model based on all combine measurables, probability values are returned for all positions (excluding specialists).
+- Any combination of metrics can be input (e.g., Height, Weight, Forty, Shuttle), and a prediction will be made.
+- It should be noted, however, that missing metrics will be estimated based on the given metrics. Therefore, if this is the primary test of interest, including as many known measurables as possible is preferred.
+- In any case, including height and weight is necessary for proper position predictions.
+- Bench press is not considered in the model. This is because it is not completed by many Quarterbacks. So, in order to have that as a predictable position, it was removed.
+- Specialists are not included in predictions.
+
+
+2. Spider Plot:
+
+- Based on the measurables inputted, a spider plot will be generated that shows the percentiles in which a player would be placed compared to past combine results.
+- The plot offers the ability to compare to any position group.
+
+3. Player comparisons:
+
+- Comparison players are generated using a k-nearest neighbors algorithm.
+- Filters can be set to compare players based on a specific year range.
+- In contrast to the previous outputs, player comparisons have more flexibility when handling non-inputted values.
+- Many players who complete the NFL Combine may not participate in all events. Considering this, inputting only metrics such as height, weight, forty, and vertical may return more potential comparisons than inputting all measurables.
+- You can experiment with any combination of variables to see how they compare to past combine performances. For instance, you may be interested in how your jumping measurables or agility measurables alone compare to past players.

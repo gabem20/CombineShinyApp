@@ -1,0 +1,53 @@
+
+
+
+<p>There are multiple features available from custom player input. Let’s
+walk through how it works:</p>
+<ol style="list-style-type: decimal">
+<li>Player Position Probabilities:</li>
+</ol>
+<ul>
+<li>Using a multinomial model based on all combine measurables,
+probability values are returned for all positions (excluding
+specialists).</li>
+<li>Any combination of metrics can be input (e.g., Height, Weight,
+Forty, Shuttle), and a prediction will be made.</li>
+<li>It should be noted, however, that missing metrics will be estimated
+based on the given metrics. Therefore, if this is the primary test of
+interest, including as many known measurables as possible is
+preferred.</li>
+<li>In any case, including height and weight is necessary for proper
+position predictions.</li>
+<li>Bench press is not considered in the model. This is because it is
+not completed by many Quarterbacks. So, in order to have that as a
+predictable position, it was removed.</li>
+<li>Specialists are not included in predictions.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Spider Plot:</li>
+</ol>
+<ul>
+<li>Based on the measurables inputted, a spider plot will be generated
+that shows the percentiles in which a player would be placed compared to
+past combine results.</li>
+<li>The plot offers the ability to compare to any position group.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Player comparisons:</li>
+</ol>
+<ul>
+<li>Comparison players are generated using a k-nearest neighbors
+algorithm.</li>
+<li>Filters can be set to compare players based on a specific year
+range.</li>
+<li>In contrast to the previous outputs, player comparisons have more
+flexibility when handling non-inputted values.</li>
+<li>Many players who complete the NFL Combine may not participate in all
+events. Considering this, inputting only metrics such as height, weight,
+forty, and vertical may return more potential comparisons than inputting
+all measurables.</li>
+<li>You can experiment with any combination of variables to see how they
+compare to past combine performances. For instance, you may be
+interested in how your jumping measurables or agility measurables alone
+compare to past players.</li>
+</ul>
